@@ -33,7 +33,7 @@ export default class Init extends GestaltCommand {
       default: process.cwd(),
       parse: async (input) => resolvePath(input),
       description:
-        'The path to the directory in which the project will be created',
+        "The path to the directory that where the project's directory will be created",
       required: false,
     }),
     'package-manager': Flags.string({
@@ -50,6 +50,9 @@ export default class Init extends GestaltCommand {
   async run(): Promise<void> {
     const { flags } = await this.parse(Init)
     const options = { ...flags, ...(await initPrompt(flags)) }
-    await initService(options)
+    await initService({
+      ...options,
+      directory: options.path,
+    })
   }
 }
