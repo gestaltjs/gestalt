@@ -1,3 +1,5 @@
-import { describe } from 'vitest'
+import { describe, test } from 'vitest'
 
-describe('initService', () => {})
+describe('initService', () => {
+  test('works', () => {})
+})
