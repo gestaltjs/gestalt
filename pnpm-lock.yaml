@@ -144,7 +144,12 @@ importers:
       terminal-link: 3.0.0
       ts-error: 1.0.6
       unified: 10.1.2
+<<<<<<< HEAD
       vite: 3.0.4
+=======
+      username: ^6.0.0
+      vite: 3.0.0
+>>>>>>> 64efcf1 (Start working on generating the package.json)
     dependencies:
       '@oclif/core': 1.9.5
       acorn: 8.8.0
@@ -178,7 +183,12 @@ importers:
       terminal-link: 3.0.0
       ts-error: 1.0.6
       unified: 10.1.2
+<<<<<<< HEAD
       vite: 3.0.4
+=======
+      username: 6.0.0
+      vite: 3.0.0
+>>>>>>> 64efcf1 (Start working on generating the package.json)
     devDependencies:
       '@types/estree': 1.0.0
       '@types/inquirer': 8.2.1
@@ -10259,6 +10269,13 @@ packages:
       tmpl: 1.0.5
     dev: true
 
+  /map-age-cleaner/0.1.3:
+    resolution: {integrity: sha512-bJzx6nMoP6PDLPBFmg7+xRKeFZvFboMrGlxmNj9ClvX53KrmvM5bXFXEWjbz4cz1AFn+jWJ9z/DJSz7hrs0w3w==}
+    engines: {node: '>=6'}
+    dependencies:
+      p-defer: 1.0.0
+    dev: false
+
   /map-obj/1.0.1:
     resolution: {integrity: sha512-7N/q3lyZ+LVCp7PzuxrJr4KMbBE2hW7BT7YNia330OFxIf4d3r5zVpicP2650l7CPN6RM9zOJRl3NGpqSiw3Eg==}
     engines: {node: '>=0.10.0'}
@@ -10321,6 +10338,14 @@ packages:
   /media-typer/0.3.0:
     resolution: {integrity: sha512-dq+qelQ9akHpcOl/gUVRTxVIOkAJ1wR3QAvb4RsVjS8oVoFjDGTc679wJYmUmknUF5HwMLOgb5O+a3KxfWapPQ==}
     engines: {node: '>= 0.6'}
+    dev: false
+
+  /mem/9.0.2:
+    resolution: {integrity: sha512-F2t4YIv9XQUBHt6AOJ0y7lSmP1+cY7Fm1DRh9GClTGzKST7UWLMx6ly9WZdLH/G/ppM5RL4MlQfRT71ri9t19A==}
+    engines: {node: '>=12.20'}
+    dependencies:
+      map-age-cleaner: 0.1.3
+      mimic-fn: 4.0.0
     dev: false
 
   /memfs/3.4.4:
@@ -10405,7 +10430,6 @@ packages:
   /mimic-fn/4.0.0:
     resolution: {integrity: sha512-vqiC06CuhBTUdZH+RYl8sFrL096vA45Ok5ISO6sE/Mr1jRbGH4Csnhi8f3wKVl7x8mO4Au7Ir9D3Oyv1VYMFJw==}
     engines: {node: '>=12'}
-    dev: true
 
   /mimic-response/1.0.1:
     resolution: {integrity: sha512-j5EctnkH7amfV/q5Hgmoal1g2QHFJRraOtmx0JpIqkxhBhI/lJSl1nMpQ45hVarwNETOoWEimndZ4QK0RHxuxQ==}
@@ -10878,6 +10902,11 @@ packages:
   /p-cancelable/1.1.0:
     resolution: {integrity: sha512-s73XxOZ4zpt1edZYZzvhqFa6uvQc1vwUa0K0BdtIZgQMAJj9IbebH+JkgKZc9h+B05PKHLOTl4ajG1BmNrVZlw==}
     engines: {node: '>=6'}
+    dev: false
+
+  /p-defer/1.0.0:
+    resolution: {integrity: sha512-wB3wfAxZpk2AzOfUMJNL+d36xothRSyj8EXOa4f6GMqYDN9BJaaSISbsk+wS9abmnebVw95C2Kb5t85UmpCxuw==}
+    engines: {node: '>=4'}
     dev: false
 
   /p-filter/2.1.0:
@@ -13932,6 +13961,14 @@ packages:
       '@types/react': 17.0.48
       react: 17.0.2
       use-isomorphic-layout-effect: 1.1.2_skqlhrap4das3cz5b6iqdn2lqi
+    dev: false
+
+  /username/6.0.0:
+    resolution: {integrity: sha512-YZtBnyXbsO0B7HMPmPgka16LY16MYyz1C5niZPImHLBv647gFrrPYQgEg/QeK0Sh44mXInBoxdX42B4UtDpNJA==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dependencies:
+      execa: 5.1.1
+      mem: 9.0.2
     dev: false
 
   /util-arity/1.1.0:

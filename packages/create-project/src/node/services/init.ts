@@ -10,6 +10,13 @@ import { Abort } from '@gestaltjs/core/common/error'
 import { content, pathToken } from '@gestaltjs/core/node/logger'
 
 /**
+ * The version is inlined here at transpilation time so the publishing of new versions of @gestaltjs/create-project
+ * brings the version in the repository.
+ **/
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import { version as gestaltjsVersion } from '../../../../gestaltjs/package.json'
+/**
  * An abort error that's thrown when the user tries to create a project and the directory
  * already exists.
  * @param directory {directory} The absolute path to the already-existing directory.
@@ -70,7 +77,26 @@ export async function ensureProjectDirectoryAbsence(directory: string) {
 export async function initPackageJson(
   directory: string,
   options: InitServiceOptions
-) {}
+) {
+  const packageJson = {
+    name: hyphenCased(options.name),
+    private: true,
+    license: 'UNLICENSED',
+    scripts: {
+      dev: 'gestalt dev',
+      build: 'gestalt build',
+      test: 'gestalt test',
+      check: 'gestalt check',
+      generate: 'gestalt generate',
+      info: 'gestalt info',
+      routes: 'gestalt routes',
+    },
+    dependencies: {
+      gestaltjs: gestaltjsVersion,
+    },
+    author: 'xxx',
+  }
+}
 
 export async function initREADME(
   directory: string,
